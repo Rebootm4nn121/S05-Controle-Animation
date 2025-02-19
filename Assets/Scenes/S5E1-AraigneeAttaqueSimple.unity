@@ -3772,7 +3772,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 62899f850307741f2a39c98a8b639597, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  m_Actions: {fileID: -944628639613478452, guid: c0a5a4dd135168a4eb49ddc45e8efba1,
+  m_Actions: {fileID: -944628639613478452, guid: 04c0631f55929af4e9a6867f65a9b85e,
     type: 3}
   m_NotificationBehavior: 0
   m_UIInputModule: {fileID: 0}
@@ -3825,6 +3825,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _vitessePromenade: 0.5
+  _vitesseAttaque: 0
 --- !u!4 &7720876671790417874
 Transform:
   m_ObjectHideFlags: 0
