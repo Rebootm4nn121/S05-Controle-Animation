@@ -7,8 +7,10 @@ public class ControleAraigneeV2 : MonoBehaviour
 {
     // variables de mouvement et contrôle
     [SerializeField] private float _vitessePromenade;
+    [SerializeField] private float _vitesseAttaque;
     private Rigidbody _rb;
     private Vector3 directionInput;
+    private Vector3 actionInput;
 
     // variables de contrôle d'animation
     private Animator _animator;
@@ -24,7 +26,23 @@ public class ControleAraigneeV2 : MonoBehaviour
     {
         Vector2 directionAvecVitesse = directionBase.Get<Vector2>() * _vitessePromenade;
         directionInput = new Vector3(directionAvecVitesse.x, 0f, directionAvecVitesse.y);
-        _animator.SetFloat("Deplacement", directionInput.magnitude);
+        _animator.SetFloat("Mouvement", directionInput.magnitude);
+    }
+    void OnAttaquer()
+    {
+
+        Debug.Log("Moment d'attaquer");
+        _animator.SetBool("Attaquer", true);
+
+
+    }
+
+    void TerminerAttaque()
+    {
+        Debug.Log("Moment d'attaquer");
+        _animator.SetBool("Attaquer", true);
+        Invoke("TerminerAttaque", 0.2f);
+
     }
 
     void FixedUpdate()
